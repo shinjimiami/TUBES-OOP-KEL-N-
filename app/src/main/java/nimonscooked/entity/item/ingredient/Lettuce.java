@@ -1,8 +1,8 @@
 package nimonscooked.entity.item.ingredient;
 
 public class Lettuce extends Ingredient{
-    public Lettuce(String id, float x, float y, IngredientState initialState) {
-        super(id, "Lettuce", x, y, initialState);
+    public Lettuce(String id, float x, float y, IngredientState currentState) {
+        super(id, "Lettuce", x, y, currentState);
     }
 
     @Override
