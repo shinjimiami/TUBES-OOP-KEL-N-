@@ -1,3 +1,4 @@
+
 package nimonscooked.entity.station;
 
 // berfungsi untuk menghapus item yang dibuang pemain
@@ -8,5 +9,8 @@ public class TrashStation extends Station {
         super(id, "Trash Station", x, y);
     }
 
-
+	@Override
+	public void interact(ChefPlayer player) {
+		// placeholder
+	}        
 }

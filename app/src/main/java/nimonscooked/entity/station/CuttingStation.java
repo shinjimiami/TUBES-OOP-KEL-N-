@@ -1,6 +1,6 @@
 package nimonscooked.entity.station;
 
-import nimonscooked.entity.chefPlayer;
+import nimonscooked.entity.station.ChefPlayer;
 import nimonscooked.entity.station.Station;
 import nimonscooked.interfaces.Preparable;
 import nimonscooked.enums.IngredientState;
@@ -27,7 +27,6 @@ public class CuttingStation extends Station {
             if(player.getHeldItem() != null){ //menunggu update dari chefPlayer, ini berfungsi untuk ngecek apakah player pegang item atau nggak
                 super.placeItem(player.takeItem()); //item ditaro di cutting station
                 this.savedTime = 0;
-                System.out.println("Item berhasil ditaruh di cutting station");
             }
         }
 

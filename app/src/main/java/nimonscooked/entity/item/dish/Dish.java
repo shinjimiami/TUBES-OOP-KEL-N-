@@ -3,7 +3,7 @@ package nimonscooked.entity.item.dish;
 import java.util.ArrayList;
 import java.util.List;
 import nimonscooked.enums.IngredientState;
-import nimonscooked.entity.item.ingredient.Preparable;
+import nimonscooked.interfaces.Preparable;
 
 public class Dish{
     private final List<Preparable> components;
@@ -17,7 +17,7 @@ public class Dish{
             return false;
         }
 
-        if(component.getState() == IngredientState.RAW || component.getState() == IngredientState.BURNT) {
+        if(component.getState() == IngredientState.RAW || component.getState() == IngredientState.BURNED) {
             return false;
         }
 

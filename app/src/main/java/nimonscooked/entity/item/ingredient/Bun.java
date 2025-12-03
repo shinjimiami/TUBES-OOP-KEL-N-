@@ -1,5 +1,7 @@
 package nimonscooked.entity.item.ingredient;
 
+import nimonscooked.enums.IngredientState;
+
 public class Bun extends Ingredient {
     public Bun(String id, float x, float y, IngredientState currentState) {
         super(id, "Bun", x, y, currentState);
@@ -20,5 +22,5 @@ public class Bun extends Ingredient {
     public boolean canBePlacedOnPlate(){
         return currentState == IngredientState.CHOPPED;
     }
-    
+
 }

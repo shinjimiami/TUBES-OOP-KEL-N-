@@ -13,7 +13,7 @@ public abstract class Ingredient extends Item implements Preparable{
         this.currentState = initialState;
     }
 
-    public IngredientState getCurrentState() {
+    public IngredientState getState() {
         return currentState;
     }
 
@@ -46,7 +46,7 @@ public abstract class Ingredient extends Item implements Preparable{
             if(currentState == IngredientState.CHOPPED){
                 currentState = IngredientState.COOKED;
             } else if(currentState == IngredientState.COOKED){
-                currentState = IngredientState.BURNT;
+                currentState = IngredientState.BURNED;
             }
         }
     }

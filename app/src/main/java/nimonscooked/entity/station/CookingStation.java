@@ -2,9 +2,11 @@ package nimonscooked.entity.station;
 
 import nimonscooked.entity.station.Station;
 import nimonscooked.interfaces.Preparable;
-import nimonscooked.interfaces.CookingDevice;
 import nimonscooked.enums.IngredientState;
+import nimonscooked.entity.item.kitchenutensil.FryingPan;
+import nimonscooked.entity.station.ChefPlayer;
 import javax.swing.Timer;
+import java.util.List;
 
 // berfungsi untuk memasak ingredient yang dapat dimasak
 // hanya bisa mulai apabila sudah ada fryingpan di cooking station
@@ -35,12 +37,16 @@ public class CookingStation extends Station {
     private void startCookingTimer() {
         stopCookingTimer();
 
-        if(!(this.containedItem instanceof CookingDevice)){
+        if(!(this.containedItem instanceof FryingPan)){
             return;
         }
 
-        CookingDevice cookingDevice = (CookingDevice) this.containedItem;
-        Preparable itemToCook = cookingDevice.getFirstContent();
+        FryingPan fryingPan = (FryingPan) this.containedItem;
+        List<Preparable> contents = fryingPan.getContents();
+        if(contents.isEmpty()){
+            return;
+        }
+        Preparable itemToCook = contents.get(0);
 
         if(itemToCook == null || !itemToCook.canBeCooked()){
             return;
