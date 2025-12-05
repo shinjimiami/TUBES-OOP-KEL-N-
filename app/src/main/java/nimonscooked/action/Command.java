@@ -1,4 +1,5 @@
 package nimonscooked.action;
+
 import nimonscooked.entity.Chef;
 
 public interface Command {
