@@ -5,6 +5,10 @@ import nimonscooked.entity.item.kitchenutensil.Plate;
 import nimonscooked.main.OrderManager;
 
 public class ServingCounter extends Station {
+
+    public ServingCounter(String id, float x, float y) {
+        super(id, "Serving Counter", x, y);
+    }
     
     private OrderManager orderManager;
 
