@@ -10,7 +10,6 @@ public class Chef {
     private Position position;
     private Direction direction;
     private ChefStatus status;
-    // Chef can hold one item
     private Item heldItem;
 
     public Chef(String name, int startX, int startY) {
@@ -32,7 +31,6 @@ public class Chef {
         this.direction = dir;
     }
 
-    // Held item helpers (compatibility with old ChefPlayer API)
     public Item getHeldItem() { return heldItem; }
 
     public Item takeItem() {
