@@ -6,23 +6,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         JFrame window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
         window.setTitle("Nimonscooked");
 
         GamePanel gamePanel = new GamePanel();
-//        gamePanel.setTime(time);
-//        gamePanel.setWeather(weather);
-//        gamePanel.setGameClock(gameClock);
+        // gamePanel.setTime(time);
+        // gamePanel.setWeather(weather);
+        // gamePanel.setGameClock(gameClock);
 
         window.add(gamePanel);
         window.pack();
         window.setLocationRelativeTo(null);
         window.setVisible(true);
 
-//        gamePanel.setupGame();
+        // gamePanel.setupGame();
         gamePanel.startGameThread();
 
     }
